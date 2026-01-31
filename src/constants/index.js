@@ -324,8 +324,8 @@ import {
         },
       ],
       image: disney,
-      source_code_link: "https://github.com/Starter-Starter/mythic-framework",
-      link: 'https://github.com/Starter-Starter/mythic-framework',
+      source_code_link: "https://mythicframework.mintlify.app/",
+      link: 'https://mythicframework.mintlify.app/',
     },
     {
       name: "Kitchen Chaos",
