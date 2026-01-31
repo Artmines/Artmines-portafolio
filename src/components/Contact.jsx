@@ -16,7 +16,8 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
-  const [submitted, setSubmitted] = useState(false); // New state to track if the form has been submitted
+  const [submitted, setSubmitted] = useState(false);
+  const [copied, setCopied] = useState(false);
 
 
   const handleChange = (e) => {
@@ -61,6 +62,21 @@ const Contact = () => {
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
+
+        <div className='mt-4 flex items-center gap-3'>
+          <span className='text-[#a1a1aa] text-[15px]'>arturowells@gmail.com</span>
+          <button
+            type='button'
+            onClick={() => {
+              navigator.clipboard.writeText('arturowells@gmail.com');
+              setCopied(true);
+              setTimeout(() => setCopied(false), 2000);
+            }}
+            className='text-[13px] px-3 py-1 rounded-lg border border-white/10 text-[#a1a1aa] hover:text-[#f97316] hover:border-[#f97316]/40 transition-all duration-300'
+          >
+            {copied ? 'Copied!' : 'Copy'}
+          </button>
+        </div>
 
         <form
           ref={formRef}
